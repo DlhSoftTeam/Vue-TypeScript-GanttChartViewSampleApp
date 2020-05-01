@@ -7,14 +7,14 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 declare let DlhSoft: any;
 
 @Component
-export default class GanttChart extends Vue {
+export default class NetworkDiagram extends Vue {
   @Prop() private items!: any[];
   @Prop() private settings!: any;
   @Prop() private license?: string;
 
-  mounted() {
+  private mounted() {
     const changeHandler = this.settings.itemPropertyChangeHandler;
-    DlhSoft.Controls.GanttChartView.initialize(this.$el, this.items, this.settings, this.license);
+    DlhSoft.Controls.Pert.NetworkDiagramView.initialize(this.$el, this.items, this.settings, this.license);
     this.settings.itemPropertyChangeHandler = (item: any, propertyName: string, isDirect: boolean, isFinal: boolean) => {
       if (changeHandler)
         changeHandler(item, propertyName, isDirect, isFinal);

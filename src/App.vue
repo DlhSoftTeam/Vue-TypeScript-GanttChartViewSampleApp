@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import GanttChart from './components/GanttChart.vue';
+import GanttChart from './components/DlhSoft.ProjectData.GanttChart.Vue-TypeScript/GanttChart.vue';
 declare let DlhSoft: any;
 
 @Component({
